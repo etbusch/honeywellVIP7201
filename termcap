@@ -1,0 +1,21 @@
+# Termcap Honeywell for 7200. In the absence of STAND-OUT mode, we set
+# HALF-BRIGHT Formalities when we come into view, and we use brillianza
+# Normal STANDOUT.
+#ESC # to clear screen is not documented in the manual for the 7200,
+# But works on 7300 (for testing).
+# - Martin, 8-5-1
+# NOTE! If you try to generate the terminfo this, insert captoinfo
+# "Ht = ^ I", which 'is not true! VIP7200 does not react to TAB!
+# The makefile knows it and does a sed to repair the problem (P)
+# - Martin, 14-5-1
+hw|vip7200|Honeywell VIP7200:\ 
+    :am:bs:\
+    :co#80:li#24:\
+    :ku=\EA:kd=\EB:kr=\EC:kl=\ED:\
+    :cr=^M:\
+    :ti=\E4:te=\E3:\
+    :so=\E3:se=\E4:\
+    :up=\EA:do=\EB:nd=\EC:le=\ED:\
+    :ho=\EH:cd=\EJ\000:ce=\EK:\
+    :cm=\Ef%r%+ %+ :\
+    :cl=\E`:
