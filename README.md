@@ -1,5 +1,7 @@
 # honeywellVIP7201
-Termcap and terminfo files for the Honeywell VIP 7201 Terminal
+Termcap and terminfo files for the Honeywell VIP 7201 Serial Terminal
+
+![](https://i.imgur.com/SSkMy1O.jpg)
 
 This is compatible with most versions of ncurses and similar libraries that need specific terminal handling for a serial terminal this old. Beware though, that several more modern programs ignore the global terminal environment variable and just assume you're on xterm or a similar emulator.
 
